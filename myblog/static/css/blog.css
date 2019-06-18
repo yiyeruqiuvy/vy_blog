@@ -1,0 +1,241 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*main*/
+body{
+	margin: 0 auto;
+}
+#wrap{
+    width: 1265px;
+    height: 710px;
+	margin-left: auto;
+    margin-right:auto;
+    margin:0 auto;
+}
+.photo{
+	z-index: 2;
+	position: absolute;
+    left: 40px;
+    top: 50px;
+}
+.p{
+	position: relative;
+    height: 103px;
+    width: 103px;
+    border-radius: 50px;
+}
+.background{
+	width: 1265px;
+	height: 710px;
+	z-index: 1;
+	overflow: hidden;
+}
+.introduce{
+	z-index: 2;
+    position: absolute;
+    width: 126px;
+    height: 151px;
+    top: 162px;
+    left: 30px;
+    background-color: #855786a6;
+    /* border: 1px solid black; */
+    border-radius: 42%;
+}
+.introduce li>p{
+	position: relative;
+    left: 16px;
+    font-family: cursive;
+}
+
+
+
+/*内容*/
+.content{
+    position: absolute;
+    width: 270px;
+    height: 300px;
+    background-color: #228c9259;
+    border: 1px #fff;
+    border-radius: 5%;
+    top: 40px;
+    left: 977px;
+}
+.title{
+	position: relative;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.title p{
+	position: relative;
+    color: #a24e35c9;
+    font-size: x-large;
+    font-family: STFangsong;
+
+}
+.content-box{
+    width: 270px;
+    height: 200px;
+    text-align: center;
+}
+.content_box_a{
+    color: #49ca14;
+    font-family: fantasy;
+    font-size: large;
+    text-decoration:none;
+}
+/*slideshow*/
+#slideshowRecommend{
+	position: absolute;
+    top: 404px;
+    left: 55px;
+}
+.slideshow{
+    position: relative;
+    width: 270px;
+    height: 200px;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    border-radius: 9%;
+}
+.slideshowImg{
+    position: absolute;
+    width: 1890px;
+    height: 200px;
+    z-index: 1;
+}
+.slideshowImg img{
+    width: 270px;
+    height: 200px;
+    float: left;
+    border-radius: 9%;
+}
+/*.pp{
+    position: absolute;
+    z-index: 4;
+    top: 200px;
+    left: 20px;
+    color: green;
+    display: inline-block;
+}*/
+.slideshowNav{
+    position: relative;
+    left: 127px;
+    top: -27px;
+    width: 270px;
+    height: 20px;
+    z-index: 4;
+}
+.slideshowNavType{
+    width: 210px;
+    height: 18px;
+}
+.slideshowNavType span{
+    width: 14px;
+    height: 14px;
+    margin: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: left;
+    }
+/*span:nth-child(2):hover{
+    background: url(../bilibiliImg/sI_1.png)no-repeat;
+    z-index: 3;
+}
+span:nth-child(3):hover{
+    background: url(../bilibiliImg/sI_1.png)no-repeat;
+    z-index: 3;
+}
+span:nth-child(4):hover{
+    background: url(../bilibiliImg/sI_1.png)no-repeat;
+    z-index: 3;
+}
+span:nth-child(5):hover{
+    background: url(../bilibiliImg/sI_1.png)no-repeat;
+    z-index: 3;
+}*/
+span.sI{
+    position: relative;
+    left: 1px;
+    top: -2.1px;
+    height: 17px;
+    width: 17px;
+    background: url(../../static/home-img/sI_2.png) no-repeat;
+}
+
+.slideshowHeadline{
+    position: relative;
+    width: 270px;
+    height: 50px;
+    overflow: hidden;
+    left: -80px;
+    top: -226px;
+    z-index: 3;
+}
+.slideshowHeadline ul{
+    position: absolute;
+    width: 3150px;
+    height: 220px;
+    z-index: 1;
+}
+.slideshowHeadline p{
+  float: left;
+  color: #e40a37d1;
+  margin: 4px 100px;
+}
+.more{
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    background: rgba(0,0,0,.64);
+    border-radius: 15%;
+    position: relative;
+    left: 220px;
+    top: 35px;
+    z-index: 5;
+    display: none;
+}
+/*.slideshowImg:hover +.more{
+    display: inline-block;
+}*/
+.more-1{
+    text-decoration: none;
+    position: relative;
+    font-size: 14px;
+    top: -8px;
+    left: 4px;
+    color: #fff;
+}
+.more-2{
+    text-decoration: none;
+    font-size: 33px;
+    position: relative;
+    left: 2px;
+    top: -4px;
+    color: #fff;
+}
+
+
+/*创建新blog*/
+.create_article{
+    position: absolute;
+    top: 412px;
+    left: 1030px;
+    width: 200px;
+    height: 120px;
+    border-radius: 50%;
+    background: #1d99c57d;
+}
+#create_a{
+    position: relative;
+    color: #ad216b;
+    font-size: 41px;
+    font-family: monospace;
+    text-decoration: none;
+    line-height: 120px;
+    text-align: center;
+    display: block;
+
+}

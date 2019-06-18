@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block title %}
+    <title>{{ article.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/article_page_css.css' %}">
+{% endblock %}
+
+{% block background %}
+    <div id="background"></div>
+{% endblock %}
+
+{% block content %}
+    <div id="article_page">
+        <div class="title">
+            <h1>{{ article.title }}</h1>
+        </div>
+        <div class="a_content">
+                <h3>{{ article.content }}</h3>
+        </div>
+    </div>
+    <div class="alter_article">
+        <a href="{% url 'blog:new_article' article.id %}">编辑</a>
+    </div>
+{% endblock %}
+
+{% block slideshowrecommend %}
+
+{% endblock %}

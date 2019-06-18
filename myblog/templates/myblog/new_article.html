@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block title %}
+    <title>新建xxx了</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/article_page_css.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/new.css' %}">
+
+{% endblock %}
+
+
+{% block background %}
+    <div id="background"></div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="edit">
+        <form action="{% url 'blog:edit_article' %}"  method="post">
+            {% csrf_token %}
+            <input type="hidden" name="article_id"  value="{{ article.id | default:'0'}}">
+
+            <label for="" class="fl_title">标题</label>
+            <input class="fi_title" type="text" name="title" value="{{ article.title }}">
+            <label class="fl_content" for="">内容</label>
+            <input type="text" class="fi_content" name="content" value="{{ article.content }}">
+            <input class="submit" type="submit">
+
+        </form>
+    </div>
+{% endblock %}
+
+
+
+{% block slideshowrecommend %}
+
+{% endblock %}

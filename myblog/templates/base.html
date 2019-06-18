@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    {% block title %}
+        <title>vy_b dlog</title>
+    {% endblock %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+	<!--盒子-->
+	<div id="wrip">
+    {% block background %}
+        <img  class="background" src="{% static 'home-img/background.jpg' %}">
+    {% endblock %}
+
+		<iframe name="" src="" frameborder="0" scrolling="no"></iframe>
+
+
+		<div class="Personal-interface">
+			<div class="photo">
+                <a href="{% url 'blog:home' %}"><img  class="p" src="{% static 'home-img/photo.jpg' %}"></a>
+			</div>
+			<div class="introduce">
+				<li>
+					<p>six:man</p>
+					<p>年龄：20</p>
+					<p>爱好：弹唱</p>
+					<p>xxx：打火机</p>
+					<p>打卡机：emmm</p>
+				</li>
+			</div>
+		</div>
+		<div class="content">
+			<div class="title">
+				<p>一些心得</p>
+			</div>
+			<div class="content-box">
+            {% for article in articles %}
+                <a href="{% url 'blog:article_page' article.id %}" class="content_box_a">{{ article.a_id }}.{{article.title}}</a>
+                <br>
+            {% endfor %}
+			</div>
+		</div>
+     {% block slideshowrecommend %}
+        		<div id="slideshowRecommend">
+			<div class="slideshow" id="slideshowImg">
+	    		<div class="slideshowImg" style="left:-270px">
+	    			<a href=""><img src="{% static 'home-img/img_5.jpg' %}" alt="">	</a>
+	    			<a href=""><img src="{% static 'home-img/img_1.jpg' %}" alt="">	</a>
+	    			<a href=""><img src="{% static 'home-img/img_2.jpeg' %}" alt="">   </a>
+	    			<a href=""><img src="{% static 'home-img/img_3.jpg' %}" alt="">    </a>
+	    			<a href=""><img src="{% static 'home-img/img_4.jpg' %}" alt="">	</a>
+	    			<a href=""><img src="{% static 'home-img/img_5.jpg' %}" alt="">	</a>
+	    			<a href=""><img src="{% static 'home-img/img_1.jpg' %}" alt="">	</a>
+	    		</div>
+	    	</div>
+	    	<div class="slideshowNav">
+	    		<ul class="slideshowNavType">
+	    			<span class="sI" name="1"></span>
+	    			<span name="2"></span>
+	    			<span name="3"></span>
+	    			<span name="4"></span>
+	    			<span name="5"></span>
+	    		</ul>
+	    	</div>
+	    	<div class="slideshowHeadline">
+	    		<ul class="slideshowHeadlineUl" style="left:-270px">
+	    			<a href=""><p>headline5</p></a>
+	    			<a href=""><p>headline1</p></a>
+	    			<a href=""><p>headline2</p></a>
+	    			<a href=""><p>headline3</p></a>
+	    			<a href=""><p>headline4</p></a>
+	    			<a href=""><p>headline5</p></a>
+	    			<a href=""><p>headline1</p></a>
+	    		</ul>
+	    	</div>
+            <div class="more">
+            	<a class="more-1" href="">更多</a>
+            	<a class="more-2" href=""><span>&rsaquo;</span></a>
+            </div>
+		</div>
+     {% endblock %}
+
+        <div class="create_article">
+            <a id="create_a" href="{% url 'blog:new_article' 0%}">NEW</a>
+        </div>
+
+    
+    
+    {% block content %}
+
+    {% endblock %}
+
+	</div>
+</body>
+<script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+</html>
